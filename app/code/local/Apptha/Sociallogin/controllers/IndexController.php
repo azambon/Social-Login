@@ -305,7 +305,7 @@ class Apptha_Sociallogin_IndexController extends Mage_Core_Controller_Front_Acti
 	      $this->customerAction($firstName, $lastName, $email, 'Facebook',$data);
 	   } else {
 	      Mage::getSingleton('customer/session')->addError($this->__('Facebook Login connection failed'));
-	      $this->_redirect();
+	      $this->_redirectReferer();
 	   }
     }
 	/**
